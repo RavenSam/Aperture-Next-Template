@@ -7,9 +7,11 @@ import styles from "../src/styles/Home.module.scss"
 import LeftNavigation from "../src/components/leftNavigation"
 import TopNavigation from "../src/components/topNavigation"
 import CardBox from "../src/components/cardBox"
+import RecentOrders from "../src/components/recentOrders"
+import RecentCustomers from "../src/components/recentCustomers"
 
 export default function Home() {
-   const [toggle, setToggle] = useState(true)
+   const [toggle, setToggle] = useState(false)
 
    const handleToggle = () => setToggle(!toggle)
 
@@ -26,6 +28,12 @@ export default function Home() {
                <TopNavigation handleToggle={handleToggle} toggle={toggle} />
 
                <CardBox />
+
+               <div className={styles.details}>
+                  <RecentOrders />
+
+                  <RecentCustomers />
+               </div>
             </main>
          </div>
       </>

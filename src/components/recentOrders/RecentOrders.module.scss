@@ -1,0 +1,78 @@
+.recentOrdres {
+   position: relative;
+   display: grid;
+   min-height: 400px;
+   background: var(--white1);
+   padding: 20px;
+   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.09);
+   border-radius: 20px;
+
+   .cardHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      h2 {
+         font-weight: 600;
+         color: var(--blue);
+      }
+
+      .btn {
+         padding: 5px 15px;
+         background: var(--blue);
+         text-decoration: none;
+         color: var(--white1);
+         border-radius: 6px;
+      }
+   }
+
+   table {
+      tr {
+         color: var(--black1);
+         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+         text-transform: capitalize;
+
+         &:last-child {
+            border-bottom: none;
+         }
+
+         &:hover {
+            background: var(--blue);
+            color: var(--white1);
+         }
+
+         td {
+            padding: 10px;
+
+            &:last-child {
+               text-align: end;
+            }
+
+            &:nth-child(2) {
+               text-align: end;
+            }
+
+            &:nth-child(3) {
+               text-align: center;
+            }
+
+            .status {
+               padding: 2px 5px;
+               color: var(--white1);
+               border-radius: 4px;
+               font-size: 14px;
+               font-weight: 500;
+               text-transform: capitalize;
+            }
+
+            .status.delivered {
+               background: rgb(0, 128, 21);
+            }
+
+            .status.pending {
+               background: rgb(128, 0, 32);
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,51 @@
+.recentCustomers {
+   position: relative;
+   display: grid;
+   min-height: 400px;
+   background: var(--white1);
+   padding: 20px;
+   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.09);
+   border-radius: 20px;
+
+   .cardHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      h2 {
+         font-weight: 600;
+         color: var(--blue);
+      }
+   }
+
+   .imgBx {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+   }
+
+   table {
+      tr {
+         &:hover {
+            background: var(--blue);
+            color: var(--white1);
+         }
+
+         td {
+            padding: 7px 10px;
+
+            h4 {
+               font-size: 15px;
+               font-weight: 500;
+
+               span {
+                  font-size: 13px;
+                  color: var(--black2);
+               }
+            }
+         }
+      }
+   }
+}
